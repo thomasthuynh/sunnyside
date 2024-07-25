@@ -1,3 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+/* VARIABLES */
+
+:root {
+  /* PRIMARY COLORS */
+  --color-soft-red: hsl(7, 99%, 70%);
+  --color-yellow: hsl(51, 100%, 49%);
+  --color-dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --color-dark-blue: hsl(198, 62%, 26%);
+  --color-dark-moderate-cyan: hsl(168, 34%, 41%);
+
+  /* NEUTRAL COLORS */
+  --color-very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --color-very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --color-dark-grayish-blue: hsl(232, 10%, 55%);
+  --color-grayish-blue: hsl(210, 4%, 67%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* FONT FAMILIES */
+  --font-family-barlow: "Barlow", sans-serif;
+  --font-family-fraunces: "Fraunces", serif;
+}
+
 /* GENERAL */
 
 * {
@@ -6,7 +31,7 @@
   box-sizing: border-box;
 }
 
-.wrapper {
+.container {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto;
@@ -35,12 +60,23 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-family-fraunces);
   font-weight: 600;
   line-height: 1.25;
+  text-transform: uppercase;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 700;
 }
 
 h1 {
   font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--color-white);
+  letter-spacing: 0.5rem;
 }
 
 h2 {
@@ -58,4 +94,38 @@ h4 {
 p {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+/* NAV */
+
+nav {
+  padding: 2rem 1rem;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* HEADER */
+
+header {
+  background-image: url(assets/mobile/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 538px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3.25rem;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
 }
