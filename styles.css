@@ -199,7 +199,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 538px;
+  min-height: max(100vh, 33.75rem);
 }
 
 header h1 {
@@ -217,6 +217,7 @@ header h1 {
 
 /* MAIN */
 
+/* TRANSFORM AND STAND OUT */
 .learnMoreButton {
   color: var(--color-very-dark-desaturated-blue);
   font-family: var(--font-family-fraunces);
@@ -236,10 +237,16 @@ header h1 {
   bottom: -0.15rem;
   height: 0.6rem;
   border-radius: 2rem;
-  background-color: var(--color-yellow);
   opacity: 0.25;
 }
 
+.transformYourBrandTextContainer .learnMoreButton::after {
+  background-color: var(--color-yellow);
+}
+
+.standOutTextContainer .learnMoreButton::after {
+  background-color: var(--color-soft-red);
+}
 .transformYourBrandTextContainer,
 .standOutTextContainer {
   text-align: center;
@@ -254,6 +261,43 @@ header h1 {
   font-weight: 600;
 }
 
-.standOutTextContainer .learnMoreButton::after {
-  background-color: var(--color-soft-red);
+/* GRAPHIC DESIGN AND PHOTOGRAPHY */
+.graphicDesign,
+.photography {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 37.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.graphicDesign {
+  background-image: url("./assets/mobile/image-graphic-design.jpg");
+}
+
+.photography {
+  background-image: url("./assets/mobile/image-photography.jpg");
+}
+
+.graphicDesignContainer,
+.photographyContainer {
+  text-align: center;
+}
+
+.graphicDesignContainer {
+  color: var(--color-dark-desaturated-cyan);
+}
+
+.photographyContainer {
+  color: var(--color-dark-blue);
+}
+
+.graphicDesignContainer p,
+.photographyContainer p {
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  font-size: 1rem;
+  font-family: var(--font-family-barlow);
+  font-weight: 600;
 }
