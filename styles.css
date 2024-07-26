@@ -31,6 +31,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-width: 320px;
+}
+
 .container {
   width: 90%;
   max-width: 1280px;
@@ -68,7 +72,7 @@ h4 {
 
 h1 {
   color: var(--color-white);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
 }
@@ -198,7 +202,7 @@ header {
   min-height: 538px;
 }
 
-h1 {
+header h1 {
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -229,21 +233,27 @@ h1 {
   z-index: -1;
   left: -0.5rem;
   right: -0.5rem;
-  bottom: -0.05rem;
+  bottom: -0.15rem;
   height: 0.6rem;
   border-radius: 2rem;
   background-color: var(--color-yellow);
   opacity: 0.25;
 }
 
-.transformYourBrandTextContainer {
+.transformYourBrandTextContainer,
+.standOutTextContainer {
   text-align: center;
-  padding: 4rem 0;
+  padding: 4rem 0.5rem;
 }
 
-.transformYourBrandTextContainer p {
+.transformYourBrandTextContainer p,
+.standOut p {
   padding: 1.5rem 0;
   color: var(--color-dark-grayish-blue);
   font-family: var(--font-family-barlow);
   font-weight: 600;
+}
+
+.standOutTextContainer .learnMoreButton::after {
+  background-color: var(--color-soft-red);
 }
