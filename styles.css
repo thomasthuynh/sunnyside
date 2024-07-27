@@ -303,7 +303,8 @@ header {
 
 /* TESTIMONIALS  */
 .testimonials {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
 .testimonialsContainer {
@@ -342,4 +343,11 @@ header {
 .clientTitle {
   color: var(--color-grayish-blue);
   font-size: 0.9rem;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
