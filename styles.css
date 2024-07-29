@@ -43,8 +43,10 @@ body {
 }
 
 img {
+  width: 100%;
   max-width: 100%;
   display: block;
+  background-size: cover;
 }
 
 a {
@@ -54,6 +56,8 @@ a {
 
 ul {
   list-style: none;
+  font-family: var(--font-family-barlow);
+  font-weight: 600;
 }
 
 button {
@@ -104,6 +108,28 @@ p {
   font-weight: 600;
 }
 
+@media (min-width: 640px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+
 /* NAV */
 
 nav {
@@ -113,6 +139,7 @@ nav {
 .navContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
@@ -125,10 +152,9 @@ nav {
   padding: 1.5rem 0;
   background-color: var(--color-white);
   color: var(--color-dark-grayish-blue);
-  font-family: var(--font-family-barlow);
   font-size: 1.25rem;
-  font-weight: 600;
   text-align: center;
+  max-width: 25rem;
 }
 
 .hamburgerDropdown::before {
@@ -201,6 +227,22 @@ nav {
   transform: rotate(-45deg);
 }
 
+@media (min-width: 640px) {
+  .hamburgerDropdown {
+    font-size: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .hamburgerDropdown li {
+    padding: 1.25rem 0;
+  }
+
+  .contactButton {
+    font-size: 1.25rem;
+    margin: 1.25rem 0;
+  }
+}
+
 /* HEADER */
 
 header {
@@ -263,6 +305,23 @@ header {
   color: var(--color-dark-grayish-blue);
 }
 
+@media (min-width: 640px) {
+  .learnMoreButton {
+    font-size: 1.1rem;
+  }
+
+  .transformYourBrandTextContainer,
+  .standOutTextContainer {
+    text-align: center;
+    padding: 6rem 0.5rem;
+  }
+
+  .transformYourBrandTextContainer p,
+  .standOut p {
+    padding: 2rem 0;
+  }
+}
+
 /* GRAPHIC DESIGN AND PHOTOGRAPHY */
 .graphicDesign,
 .photography {
@@ -300,6 +359,7 @@ header {
   padding-top: 1.5rem;
   padding-bottom: 4rem;
   font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 /* TESTIMONIALS  */
@@ -346,6 +406,12 @@ header {
   font-size: 0.9rem;
 }
 
+@media (min-width: 640px) {
+  .clientTitle {
+    font-size: 1rem;
+  }
+}
+
 /* GALLERY */
 
 .gallery {
@@ -382,4 +448,10 @@ footer {
 .footerLinks {
   display: flex;
   gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .footerNav {
+    font-size: 1.25rem;
+  }
 }
