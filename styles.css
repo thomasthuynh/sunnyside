@@ -297,8 +297,9 @@ header {
 .standOutTextContainer .learnMoreButton::after {
   background-color: var(--color-soft-red);
 }
-.transformYourBrandTextContainer,
-.standOutTextContainer {
+
+.transformYourBrandText,
+.standOutText {
   text-align: center;
   padding: 4rem 0.5rem;
 }
@@ -310,8 +311,8 @@ header {
 }
 
 @media (min-width: 640px) {
-  .transformYourBrandTextContainer,
-  .standOutTextContainer {
+  .transformYourBrandText,
+  .standOutText {
     padding: 6rem 0.5rem;
   }
 }
@@ -322,15 +323,15 @@ header {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .transformYourBrandTextContainer,
-  .transformYourBrandImgContainer,
-  .standOutTextContainer,
-  .standOutImgContainer {
+  .transformYourBrandText,
+  .transformYourBrandImg,
+  .standOutText,
+  .standOutImg {
     min-height: 37.5rem;
   }
 
-  .transformYourBrandTextContainer,
-  .standOutTextContainer {
+  .transformYourBrandText,
+  .standOutText {
     padding: 0 2rem;
     display: flex;
     text-align: left;
@@ -339,9 +340,12 @@ header {
     align-items: start;
   }
 
-  .transformYourBrandTextContainer {
+  .transformYourBrandText {
     order: -1;
   }
+}
+
+@media (min-width: 768px) {
 }
 
 /* GRAPHIC DESIGN AND PHOTOGRAPHY */
@@ -364,23 +368,23 @@ header {
   background-image: url("./assets/mobile/image-photography.jpg");
 }
 
-.graphicDesignContainer,
-.photographyContainer {
+.graphicDesignText,
+.photographyText {
   position: absolute;
   top: 65%;
   text-align: center;
 }
 
-.graphicDesignContainer {
+.graphicDesignText {
   color: var(--color-dark-desaturated-cyan);
 }
 
-.photographyContainer {
+.photographyText {
   color: var(--color-dark-blue);
 }
 
-.graphicDesignContainer p,
-.photographyContainer p {
+.graphicDesignText p,
+.photographyText p {
   padding-top: 1.5rem;
   font-size: 1rem;
 }
