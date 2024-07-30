@@ -5,6 +5,7 @@
 
 :root {
   /* PRIMARY COLORS */
+  --color-sky-blue: hsl(199, 99%, 62%);
   --color-soft-red: hsl(7, 99%, 70%);
   --color-yellow: hsl(51, 100%, 49%);
   --color-dark-desaturated-cyan: hsl(167, 40%, 24%);
@@ -35,6 +36,7 @@
 
 body {
   min-width: 320px;
+  background-color: var(--color-sky-blue);
 }
 
 .wrapper {
@@ -169,11 +171,14 @@ nav {
   text-transform: uppercase;
 }
 
+.navMenu a {
+  transition: all 300ms ease;
+}
+
 .contactButton a {
   background-color: var(--color-yellow);
   padding: 1rem 1.75rem;
   border-radius: 2rem;
-  transition: all 300ms ease;
 }
 
 .hamburgerMenu {
@@ -250,6 +255,7 @@ header {
   text-transform: uppercase;
   margin-top: 1rem;
   position: relative;
+  z-index: 10;
 }
 
 .learnMoreButton::after {
@@ -262,6 +268,24 @@ header {
   height: 0.6rem;
   border-radius: 2rem;
   opacity: 0.25;
+  transition: all 300ms ease;
+}
+
+.learnMoreButton:hover::after {
+  opacity: 1;
+}
+
+.transformYourBrandText,
+.standOutText {
+  text-align: center;
+  padding: 4rem 0.5rem;
+  background-color: var(--color-white);
+}
+
+.transformYourBrandTextContainer p,
+.standOutTextContainer p {
+  padding: 1.5rem 0;
+  color: var(--color-dark-grayish-blue);
 }
 
 .transformYourBrandTextContainer .learnMoreButton::after {
@@ -270,18 +294,6 @@ header {
 
 .standOutTextContainer .learnMoreButton::after {
   background-color: var(--color-soft-red);
-}
-
-.transformYourBrandText,
-.standOutText {
-  text-align: center;
-  padding: 4rem 0.5rem;
-}
-
-.transformYourBrandTextContainer p,
-.standOutTextContainer p {
-  padding: 1.5rem 0;
-  color: var(--color-dark-grayish-blue);
 }
 
 /* GRAPHIC DESIGN AND PHOTOGRAPHY */
@@ -329,6 +341,7 @@ header {
 .testimonials {
   padding-top: 4rem;
   padding-bottom: 2rem;
+  background-color: var(--color-white);
 }
 
 .testimonialsContainer {
@@ -411,6 +424,11 @@ footer {
   gap: 2rem;
 }
 
+.footerNav a,
+.footerLinks a {
+  transition: all 300ms ease;
+}
+
 /* ======= MEDIA QUERIES ======= */
 
 @media (min-width: 640px) {
@@ -442,9 +460,14 @@ footer {
     display: flex;
   }
 
+  .navMenu a:hover {
+    opacity: 0.75;
+  }
+
   .contactButton a:hover {
     background-color: rgba(255, 255, 255, 0.25);
     color: var(--color-white);
+    opacity: 1;
   }
 
   /* TRANSFORM AND STAND OUT */
@@ -477,6 +500,15 @@ footer {
   .graphicDesignText,
   .photographyText {
     max-width: 22rem;
+  }
+
+  /* FOOTER */
+  .footerNav a:hover {
+    color: var(--color-white);
+  }
+
+  .footerLinks a:hover {
+    opacity: 0.75;
   }
 }
 
