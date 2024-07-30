@@ -336,6 +336,11 @@ header {
   padding: 0 0.5rem;
 }
 
+.clientTestimonials {
+  display: grid;
+  justify-content: center;
+}
+
 .testimonial {
   display: flex;
   flex-direction: column;
@@ -343,6 +348,7 @@ header {
   justify-content: flex-start;
   text-align: center;
   padding-bottom: 4rem;
+  max-width: 35rem;
 }
 
 .testimonialImg {
@@ -486,8 +492,11 @@ footer {
     padding: 8rem 0;
   }
 
+  .testimonialsContainer {
+    padding: 0;
+  }
+
   .clientTestimonials {
-    display: grid;
     grid-template-columns: repeat(3, minmax(0, 3fr));
     gap: 2rem;
   }
@@ -520,6 +529,11 @@ footer {
   .standOutTextContainer p {
     padding: 2rem 0;
     color: var(--color-dark-grayish-blue);
+  }
+
+  /* TESTIMONIALS */
+  .clientTestimonials {
+    gap: 4rem;
   }
 
   /* GALLERY */
