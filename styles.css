@@ -456,6 +456,15 @@ footer {
   .standOutText {
     padding: 6rem 0.5rem;
   }
+
+  /* GRAPHIC DESIGN AND PHOTOGRAPHY */
+  .graphicDesign {
+    background-image: url("./assets/desktop/image-graphic-design.jpg");
+  }
+
+  .photography {
+    background-image: url("./assets/desktop/image-photography.jpg");
+  }
 }
 
 @media (min-width: 768px) {
@@ -560,7 +569,6 @@ footer {
   /* GALLERY */
   .gallery {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    min-height: 24rem;
   }
 }
 
@@ -594,10 +602,5 @@ footer {
   /* TESTIMONIALS */
   .clientTestimonials {
     gap: 4rem;
-  }
-
-  /* GALLERY */
-  .gallery {
-    min-height: 28rem;
   }
 }
