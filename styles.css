@@ -90,7 +90,6 @@ h1 {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 3rem;
 }
 
 h2 {
@@ -236,6 +235,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   min-height: max(100vh, 33.75rem);
+  position: relative;
 }
 
 .headerContainer {
@@ -243,7 +243,11 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 4rem;
+  gap: 12.5vh;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* TRANSFORM AND STAND OUT */
