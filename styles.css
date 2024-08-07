@@ -133,7 +133,6 @@ nav {
   z-index: 10;
   top: 4.75rem;
   right: 0;
-  display: none;
   width: 100%;
   padding: 1.5rem 0;
   background-color: var(--color-white);
@@ -141,6 +140,10 @@ nav {
   font-size: 1.25rem;
   text-align: center;
   max-width: 20rem;
+  scale: 0;
+  opacity: 0;
+  transform-origin: top right;
+  transition: all 300ms ease;
 }
 
 .hamburgerDropdown::before {
@@ -159,7 +162,8 @@ nav {
 }
 
 .hamburgerDropdown.active {
-  display: block;
+  scale: 1;
+  opacity: 1;
 }
 
 .contactButton {
@@ -252,6 +256,7 @@ header {
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
+  animation: fadeIn 1.25s ease;
 }
 
 /* TRANSFORM AND STAND OUT */
@@ -436,6 +441,19 @@ footer {
 .footerNav a,
 .footerLinks a svg path {
   transition: all 300ms ease;
+}
+
+/* ======= KEYFRAMES ======= */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 12.5%;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* ======= MEDIA QUERIES ======= */
